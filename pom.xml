@@ -23,25 +23,37 @@
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
+      <plugin>
+      <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+      <version>3.9.1.2184</version>
+    </plugin>
     </plugins>
   </build>
    <distributionManagement>
         <repository>
             <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://10.128.0.10:8081/repository/student-rel/</url>
+            <name>student snapshots Releases</name>
+            <url>http://175.41.216.133:8081/repository/studentapp-rel/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://10.128.0.10:8081/repository/student-snap/</url>
+            <name>student Snapshot </name>
+            <url>http://175.41.216.133:8081/repository/studentapp-snap/</url>
         </snapshotRepository>
     </distributionManagement>
+  <properties>
+  <!-- Other properties -->
+  <sonar.host.url>http://43.207.172.202:9000/</sonar.host.url>
+    <sonar.login>admin</sonar.login>
+    <sonar.password>admin1</sonar.password>
+     <sonar.java.binaries>src/</sonar.java.binaries>
+</properties>
   <dependencies>
   	<dependency>
   		<groupId>javax.servlet</groupId>
   		<artifactId>javax.servlet-api</artifactId>
-  		<version>3.0.1</version>
+      <version>3.0.1</version>
   	</dependency>
   </dependencies>
 </project>

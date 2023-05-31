@@ -39,7 +39,7 @@
         <snapshotRepository>
             <id>deployment</id>
             <name>student-Snap</name>
-            <urlhttp://44.210.236.140:8081/repository/student-snap/</url>
+            <url>http://44.210.236.140:8081/repository/student-snap/</url>
         </snapshotRepository>
     </distributionManagement>
   <properties>
